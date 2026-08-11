@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Olivere Web Inicio</title>
+</head>
+<body>
+    <nav class="menu">
+    <div class="logo">
+        <img src="Imagen/Logo perla.png" alt="La Perla del Sur Sport">
+        <h1>La Perla del Sur Sport</h1>
+    </div>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+    </ul>
+</nav>
+
+
+<section class="hero">
+    <h1>La Perla del Sur Sport</h1>
+    <img src="Imagen/Deporte.png" alt="Deportes en Barahona">
+    <p>Descubre la pasión deportiva de Barahona, la Perla del Sur.</p>
+    <a href="about.html" class="btn">Conoce más</a>
+</section>
+
+  
+
+<div class="seccion-deportes">
+
+    <div class="deportes-titulo">
+        <h2>DEPORTES</h2>
+        <p>
+            Descubre nuestras principales disciplinas, actividades
+            y eventos deportivos.
+        </p>
+    </div>
+
+    <div class="galeria-contenedor">
+
+        <!-- Flecha izquierda -->
+        <button class="flecha izquierda" onclick="moverDeportes(-1)">
+            ‹
+        </button>
+
+        <div class="galeria-deportes" id="galeriaDeportes">
+
+            <!-- TARJETA 1 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/bolbom.jpg" alt="Fútbol">
+                <div class="nombre-deporte">
+                    BALONCESTO
+                </div>
+            </div>
+
+            <!-- TARJETA 2 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/audris nin.jpg" alt="Baloncesto">
+                <div class="nombre-deporte">
+                    GIMNASIA
+                </div>
+            </div>
+
+            <!-- TARJETA 3 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/libio feliz.jpg" alt="Béisbol">
+                <div class="nombre-deporte">
+                    ATLETISMO
+                </div>
+            </div>
+
+            <!-- TARJETA 4 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/alicia feliz.jpg" alt="Voleibol">
+                <div class="nombre-deporte">
+                    PESA
+                </div>
+            </div>
+
+            <!-- TARJETA 5 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/chiva.jpg" alt="Atletismo">
+                <div class="nombre-deporte">
+                    BALONCESTO
+                </div>
+            </div>
+
+            <!-- TARJETA 6 -->
+            <div class="tarjeta-deporte">
+                <img src="Imagen/moca.jpg" alt="Natación">
+                <div class="nombre-deporte">
+                    BALONCESTO
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Flecha derecha -->
+        <button class="flecha derecha" onclick="moverDeportes(1)">
+            ›
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function moverDeportes(direccion) {
+
+    const galeria = document.getElementById("galeriaDeportes");
+
+    const tarjeta = galeria.querySelector(".tarjeta-deporte");
+
+    const espacio = 40;
+
+    const desplazamiento =
+        tarjeta.offsetWidth + espacio;
+
+    galeria.scrollBy({
+        left: desplazamiento * direccion,
+        behavior: "smooth"
+    });
+
+}
+</script>
+
+
+
+
+
+
+
+<footer>
+        <div class="footer-inner">
+            <div class="footer-brand">La Perla del Sur Sport</div>
+            <div class="footer-divider"></div>
+            <p class="footer-text">&copy; 2026 · Conectando el deporte desde el sur.</p>
+            <div class="footer-social">
+                <a href="#">📱</a>
+                <a href="#">📧</a>
+                <a href="#">📍</a>
+            </div>
+            <div class="footer-ai">Oliver Luciano</div>
+        </div>
+    </footer>
+
+</body>
+</html>

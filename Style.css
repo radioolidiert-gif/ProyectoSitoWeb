@@ -1,0 +1,466 @@
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b6; /* azul marino */
+    padding: 10px 40px;
+}
+
+.menu .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.menu .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ffd700; /* dorado */
+}
+
+/* Diseño adaptable */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0f7fa;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #0055aa;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #009966;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #0055aa;
+}
+
+
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+=========================== */
+
+main{
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
+
+section{
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+section:hover{
+    transform: translateY(-5px);
+}
+
+section h2{
+    color: #004aad;
+    margin-bottom: 15px;
+    border-left: 6px solid #004aad;
+    padding-left: 12px;
+    font-size: 30px;
+}
+
+section p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+section ul{
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+section li{
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* ===========================
+   LÍNEA DIVISORIA
+=========================== */
+
+hr{
+    display: none;
+}
+
+/* ===========================
+   TARJETA DE VALORES
+=========================== */
+
+section ul li{
+    background: #eef5ff;
+    margin: 10px 0;
+    padding: 12px;
+    border-left: 5px solid #004aad;
+    border-radius: 8px;
+    list-style: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    section{
+        padding:20px;
+    }
+
+    section h2{
+        font-size:24px;
+    }
+
+    section p,
+    section li{
+        font-size:16px;
+    }
+
+}
+
+.seccion-deportes {
+    width: 100%;
+    padding: 50px 7%;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* TÍTULO */
+
+.deportes-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.deportes-titulo h2 {
+    margin: 0 0 12px;
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #004aad;
+}
+
+.deportes-titulo p {
+    max-width: 850px;
+    margin: auto;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* CONTENEDOR DE LA GALERÍA */
+
+.galeria-contenedor {
+    position: relative;
+}
+
+
+/* GALERÍA */
+
+.galeria-deportes {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.galeria-deportes::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* TARJETAS */
+
+.tarjeta-deporte {
+    position: relative;
+    flex: 0 0 calc(25% - 30px);
+    height: 420px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+
+/* IMAGEN */
+
+.tarjeta-deporte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* EFECTO HOVER */
+
+.tarjeta-deporte:hover img {
+    transform: scale(1.07);
+}
+
+
+/* SOMBRA SOBRE LA IMAGEN */
+
+.tarjeta-deporte::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.05) 60%
+    );
+}
+
+
+/* NOMBRE DEL DEPORTE */
+
+.nombre-deporte {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 20px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/* FLECHAS */
+
+.flecha {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+
+    background: rgba(0,0,0,0.85);
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.flecha:hover {
+    background: #08a9b8;
+}
+
+.flecha.izquierda {
+    left: 0;
+}
+
+.flecha.derecha {
+    right: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .tarjeta-deporte {
+        flex: 0 0 calc(33.333% - 27px);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .seccion-deportes {
+        padding: 40px 5%;
+    }
+
+    .deportes-titulo h2 {
+        font-size: 30px;
+    }
+
+    .tarjeta-deporte {
+        flex: 0 0 75%;
+        height: 380px;
+    }
+
+    .galeria-deportes {
+        gap: 20px;
+    }
+
+}
+
+footer {
+    background: linear-gradient(135deg, #004aad, #0077b6);
+    color: #f4f6f8;
+    padding: 32px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1100px;
+    padding: 32px 7%;
+    display: grid;
+    gap: 18px;
+    justify-items: center;
+}
+
+.footer-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-divider {
+    width: 90px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 999px;
+}
+
+.footer-text {
+    max-width: 720px;
+    color: rgba(244, 246, 248, 0.9);
+    font-size: 0.97rem;
+    line-height: 1.8;
+}
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-social a {
+    color: #f4f6f8;
+    font-size: 1.35rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.footer-ai {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 26px 5%;
+    }
+
+    .footer-brand {
+        font-size: 1.3rem;
+    }
+}
+
+
