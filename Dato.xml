@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo>
+
+    <producto>
+        <id>001</id>
+        <nombre>Balón de Baloncesto</nombre>
+        <categoria>Baloncesto</categoria>
+        <descripcion>Balón utilizado para entrenamientos y competencias.</descripcion>
+        <precio>1500</precio>
+        <marca>Spalding</marca>
+        <imagen>Imagen/bolbom.jpg</imagen>
+        <disponible>Si</disponible>
+    </producto>
+
+    <producto>
+        <id>002</id>
+        <nombre>Gimnasia Deportiva</nombre>
+        <categoria>Gimnasia</categoria>
+        <descripcion>Equipamiento y accesorios para la práctica de gimnasia.</descripcion>
+        <precio>2500</precio>
+        <marca>Sport Pro</marca>
+        <imagen>Imagen/audris nin.jpg</imagen>
+        <disponible>Si</disponible>
+    </producto>
+
+    <producto>
+        <id>003</id>
+        <nombre>Atletismo</nombre>
+        <categoria>Atletismo</categoria>
+        <descripcion>Artículos deportivos para entrenamiento de atletismo.</descripcion>
+        <precio>1800</precio>
+        <marca>Running Sport</marca>
+        <imagen>Imagen/libio feliz.jpg</imagen>
+        <disponible>Si</disponible>
+    </producto>
+
+    <producto>
+        <id>004</id>
+        <nombre>Pesas Deportivas</nombre>
+        <categoria>Fitness</categoria>
+        <descripcion>Equipo para ejercicios de fuerza y acondicionamiento físico.</descripcion>
+        <precio>3200</precio>
+        <marca>Power Gym</marca>
+        <imagen>Imagen/alicia feliz.jpg</imagen>
+        <disponible>Si</disponible>
+    </producto>
+
+    <producto>
+        <id>005</id>
+        <nombre>Baloncesto Profesional</nombre>
+        <categoria>Baloncesto</categoria>
+        <descripcion>Artículos para jugadores de baloncesto.</descripcion>
+        <precio>2800</precio>
+        <marca>Nike</marca>
+        <imagen>Imagen/chiva.jpg</imagen>
+        <disponible>Si</disponible>
+    </producto>
+
+    <producto>
+        <id>006</id>
+        <nombre>Entrenamiento de Baloncesto</nombre>
+        <categoria>Baloncesto</categoria>
+        <descripcion>Equipamiento para entrenamiento y preparación deportiva.</descripcion>
+        <precio>2200</precio>
+        <marca>Adidas</marca>
+        <imagen>Imagen/moca.jpg</imagen>
+        <disponible>No</disponible>
+    </producto>
+
+</catalogo>
