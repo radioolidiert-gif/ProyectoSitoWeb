@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+     <nav class="menu">
+    <div class="logo">
+        <img src="Imagen/Logo perla.png" alt="La Perla del Sur Sport">
+        <h1>La Perla del Sur Sport</h1>
+    </div>
+    
+
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Acerca de</a></li>
+    <li><a href="catalogo.html">Catálogo</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+</ul>
+
+ </nav>
+      <!-- AQUÍ APARECERÁ EL CATÁLOGO -->
+
+    <main id="catalogo"></main>
+
+
+   
+
+    
+
+          
+          
+
+          
+
+    <!-- CARGAR XML Y XSLT -->
+
+    <script>
+
+        // Cargar el archivo XML
+        fetch("datos.xml")
+
+            .then(response => response.text())
+
+            .then(xmlTexto => {
+
+                // Convertir texto en documento XML
+                const parser = new DOMParser();
+
+                const xml = parser.parseFromString(
+                    xmlTexto,
+                    "application/xml"
+                );
+
+
+                // Cargar archivo XSLT
+                return fetch("catalogo.xsl")
+
+                    .then(response => response.text())
+
+                    .then(xslTexto => {
+
+                        // Convertir XSLT en documento XML
+                        const xsl = parser.parseFromString(
+                            xslTexto,
+                            "application/xml"
+                        );
+
+
+                        // Crear procesador XSLT
+                        const procesador =
+                            new XSLTProcessor();
+
+
+                        // Cargar la hoja XSLT
+                        procesador.importStylesheet(xsl);
+
+
+                        // Transformar XML a HTML
+                        const resultado =
+                            procesador.transformToFragment(
+                                xml,
+                                document
+                            );
+
+
+                        // Mostrar catálogo
+                        document
+                            .getElementById("catalogo")
+                            .appendChild(resultado);
+
+                    });
+
+            })
+
+            .catch(error => {
+
+                console.error(error);
+
+                document.getElementById("catalogo").innerHTML =
+                    "<p>Error al cargar el catálogo.</p>";
+
+            });
+
+    </script>
+
+    
+        <footer>
+        <div class="footer-brand">La Perla del Sur Sport</div>
+        <div class="footer-divider"></div>
+        <p class="footer-text">&copy; 2026 · Conectando el deporte desde el sur.</p>
+        <div class="footer-social">
+            <a href="#">📱</a>
+            <a href="#">📧</a>
+            <a href="#">📍</a>
+        </div>
+        <div class="footer-ai">Oliver Luciano</div>
+    </footer>
+
+</body>
+</html>

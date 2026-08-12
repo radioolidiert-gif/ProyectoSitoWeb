@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conctato</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+     <nav class="menu">
+    <div class="logo">
+        <img src="Imagen/Logo perla.png" alt="La Perla del Sur Sport">
+        <h1>La Perla del Sur Sport</h1>
+    </div>
+    <ul>
+            <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Acerca de</a></li>
+    <li><a href="catalogo.html">Catálogo</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+    </ul>
+</nav>
+     <!-- ===== FORMULARIO DE CONTACTO ===== -->
+    <main class="contact-wrapper">
+        <div class="contact-card">
+            <h1>Contáctanos</h1>
+            <p class="contact-sub">
+                ¿Tienes alguna pregunta? Escríbenos y te responderemos a la brevedad.
+            </p>
+            <div class="divider-line"></div>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej: Juan Pérez"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="5"
+                        placeholder="Escribe tu mensaje aquí..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+            </form>
+
+            <div class="contact-info">
+                <p><strong>📍 Ubicación:</strong> Región Sur, Ciudad Deportiva</p>
+                <p><strong>📞 Teléfono:</strong> +123 456 7890</p>
+                <p><strong>⏰ Horario:</strong> Lun–Vie 9:00–20:00 · Sáb 10:00–18:00</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer>
+        <div class="footer-brand">La Perla del Sur Sport</div>
+        <div class="footer-divider"></div>
+        <p class="footer-text">&copy; 2026 · Conectando el deporte desde el sur.</p>
+        <div class="footer-social">
+            <a href="#">📱</a>
+            <a href="#">📧</a>
+            <a href="#">📍</a>
+        </div>
+        <div class="footer-ai">Oliver Luciano</div>
+    </footer>
+
+</body>
+</html>
